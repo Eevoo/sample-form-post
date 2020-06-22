@@ -1,0 +1,13 @@
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\bin\Debug\netcoreapp2.1\WebRoot\main.css
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\bin\Debug\netcoreapp2.1\web.config
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\bin\Debug\netcoreapp2.1\sample_dictionary_post.deps.json
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\bin\Debug\netcoreapp2.1\sample_dictionary_post.runtimeconfig.json
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\bin\Debug\netcoreapp2.1\sample_dictionary_post.runtimeconfig.dev.json
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\bin\Debug\netcoreapp2.1\sample_dictionary_post.dll
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\bin\Debug\netcoreapp2.1\sample_dictionary_post.pdb
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\obj\Debug\netcoreapp2.1\sample-dictionary-post.fsprojAssemblyReference.cache
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\obj\Debug\netcoreapp2.1\sample-dictionary-post.AssemblyInfoInputs.cache
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\obj\Debug\netcoreapp2.1\sample-dictionary-post.AssemblyInfo.fs
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\obj\Debug\netcoreapp2.1\sample_dictionary_post.dll
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\obj\Debug\netcoreapp2.1\sample_dictionary_post.pdb
+C:\Users\Alex\RiderProjects\sample-dictionary-post\src\sample-dictionary-post\obj\Debug\netcoreapp2.1\sample-dictionary-post.genruntimeconfig.cache
