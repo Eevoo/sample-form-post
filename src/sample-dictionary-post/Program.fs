@@ -21,14 +21,13 @@ type Message =
         Text : string
     }
 
+type [<CLIMutable>] InventoryItem =
+    { Name: string
+      MoneyValue: int }
 [<CLIMutable>] // fix MissingMethodException: No parameterless constructor defined for this object.
 type AdventurerDto = 
-    {
-        name: string
-        inventory: Dictionary<string,int>
-        // string = item id guid
-        // int = how many of that item
-    }
+    { Name: string
+      Inventory: InventoryItem array }
 
 // ---------------------------------
 // Views
@@ -64,13 +63,10 @@ module Views =
                 let formFields = 
                     [
                         input [_type "text"; _name "name"; _value "" ;_placeholder "This will bind to 'name' value"]
-                        // If I use the below 2 i get Missing value for required property inventory.
-                        //input [_type "text"; _name "inventory[key]"; _value "itemid123";_placeholder "This will be the inventory dictionary key"]
-                        //input [_type "text"; _name "inventory[value]"; _value "1";_placeholder "This will be the inventory dictionary value"]
-                        
-                        // if I do it as a single line i get
-                        // ArgumentException: Object of type 'System.String' cannot be converted to type 'System.Collections.Generic.Dictionary`2[System.String,System.Int32]'.
-                        input [_type "text"; _name "inventory[]"; _value "itemid123,2";_placeholder "This will be the inventory dictionary key + value"]
+                        br []
+                        input [_type "text";   _name "inventory[0].name" ]
+                        input [_type "number"; _name "inventory[0].moneyValue" ]
+                        br []
                         input [_type "submit"; _value "Submit"]
                     ]
                 form [ _method "post"; _action "/createAdventurer"] formFields
@@ -131,10 +127,10 @@ let configureCors (builder : CorsPolicyBuilder) =
            |> ignore
 
 let configureApp (app : IApplicationBuilder) =
-    let env = app.ApplicationServices.GetService<IHostingEnvironment>()
-    (match env.IsDevelopment() with
-    | true  -> app.UseDeveloperExceptionPage()
-    | false -> app.UseGiraffeErrorHandler errorHandler)
+    let env = app.ApplicationServices.GetService<IWebHostEnvironment>()
+    (match env.EnvironmentName with
+    | "Development"  -> app.UseDeveloperExceptionPage()
+    | _ -> app.UseGiraffeErrorHandler errorHandler)
         .UseHttpsRedirection()
         .UseCors(configureCors)
         .UseStaticFiles()
